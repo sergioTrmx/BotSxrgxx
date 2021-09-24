@@ -76,12 +76,31 @@ const isMe = senderNumber == botNumber
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
+if(body == ('hola')){
+client.sendMessage(from. 'como estás pana'. MessageType.text. {quoted: sam})
+}
 switch (command) {
 
 case 'bot':
 client.sendMessage(from, 'Hola,felicidades, has logrado enviar un mensaje mediante un servidor externo😚', text, {quoted : sam})
 break
-                
+
+case 'logo':
+const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
+client.sendMessage(from. imagen. MessageType.image. {quoted: { key: {
+fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+},
+message: {
+"documentMessage": { "title": "Sxrgxx🤡", 'jpegThumbnail': fs.readFileSync('./media/Sxrgxx.jpg')}}
+}})
+break
+
+case 'puto':
+const audio = fs.readFileSync('./media/otakuQliao.mp3')
+client.sendMessage(from. audio. MessageType.audio.{quoted: sam. mimetype: 'audio/mp3'. duration: -999999 })
+client.sendMessage(from. audio. MessageType.audio.{quoted: sam. mimetype: 'audio/mp3'. duration: -999999. ptt: true. sendEphemeral: true})
+break              
 }
 
 } catch (e) {
