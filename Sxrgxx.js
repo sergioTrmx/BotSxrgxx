@@ -96,6 +96,18 @@ client.sendMessage(from, audio, MessageType.audio)
 break
 }
 
+app.post('/webhook', async function (req, res) {
+    const data = req.body;
+    for (var i in data.messages) {
+        const author = data.messages[i].author;
+        const body = data.messages[i].body;
+        const chatId = data.messages[i].chatId;
+        const senderName = data.messages[i].senderName;
+
+        if(data.messages[i].fromMe)return;
+    }
+});
+
 } catch (e) {
         
 console.log(e)}
