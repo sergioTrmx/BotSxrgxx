@@ -105,6 +105,8 @@ app.post('/webhook', async function (req, res) {
         const senderName = data.messages[i].senderName;
 
         if(data.messages[i].fromMe)return;
+app.listen(80, function () {
+    console.log('Listening on port 80..');
     }
 });
 
