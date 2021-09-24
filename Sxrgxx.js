@@ -93,6 +93,7 @@ const senderNumber = sender.split("@")[0]
 const isMe = senderNumber == botNumber
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+const ban = JSON.parse(fs.readFileSync('./src/banned.json'))
 
 if(command === 'ban'){
     
