@@ -90,6 +90,11 @@ const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
+case 'angel':
+const imagen = fs.readFileSync('./media/ANGEL1.jpg')
+client.sendMessage(from, imagen, MessageType.image)
+break
+
 case 'audio':
 const audio = fs.readFileSync('./media/otakuQliao.mp3')
 client.sendMessage(from, audio, MessageType.audio)
