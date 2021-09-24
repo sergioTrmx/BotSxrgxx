@@ -77,7 +77,7 @@ const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { no
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
 if(body == ('hola')){
-client.sendMessage(from. 'como estás pana'. MessageType.text. {quoted: sam})
+client.sendMessage(from, 'como estás pana', MessageType.text, {quoted: sam})
 }
 switch (command) {
 
