@@ -87,13 +87,7 @@ break
 
 case 'logo':
 const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
-client.sendMessage(from, imagen, MessageType.image. {quoted: sam. Mimetype: {
-fromMe: false,
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
-},
-message: {
-"documentMessage": { "title": "Sxrgxx🤡", 'jpegThumbnail': fs.readFileSync('./media/Sxrgxx.jpg')}}
-}})
+client.sendMessage(from, imagen, MessageType.image)
 break
 
 case 'puto':
