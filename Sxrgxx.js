@@ -105,6 +105,33 @@ const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
+case 'setdesc':
+addFilter(from)
+if (!isGroup) return await reply(mess.only.group)
+if (!isAdmin) return await reply(mess.only.admin)
+if (!botAdmin) return await reply(mess.only.Badmin)
+var newDesc = args.join(" ")
+samu330.groupUpdateDescription(from, newDesc).then(() => {
+wa.sendFakeStatus(from, "La descripcion del grupo se ah cambiado a" + newDesc, "GROUP SETTING")
+})
+break
+case 'wasted':
+addFilter(from)
+var imgbb = require('imgbb-uploader')
+if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
+ger = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
+reply(mess.wait);
+owgi = await samu330.downloadAndSaveMediaMessage(ger);
+anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', owgi);
+teks = `${anu.display_url}`;
+anu1 = await getBuffer(`https://some-random-api.ml/canvas/wasted?avatar=${teks}`);
+fs.writeFileSync('wasted.jpg', anu1)
+samu330.sendMessage(from, fs.readFileSync('wasted.jpg'), MessageType.image)
+} else {
+reply('Manda la foto!');
+}			
+break
+
 case 'sgay':
 addFilter(from)	
 if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
