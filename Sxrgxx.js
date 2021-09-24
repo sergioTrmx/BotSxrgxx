@@ -87,7 +87,7 @@ break
 
 case 'logo':
 const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
-client.sendMessage(from. imagen. MessageType.image. {quoted: { key: {
+client.sendMessage(from, imagen, MessageType.image. {quoted: { key: {
 fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
 },
@@ -98,7 +98,7 @@ break
 
 case 'puto':
 const audio = fs.readFileSync('./media/otakuQliao.mp3')
-client.sendMessage(from. audio. MessageType.audio.{quoted: sam. mimetype: 'audio/mp3'. duration: -999999 })
+client.sendMessage(from, audio, MessageType.audio.{quoted: sam. mimetype: 'audio/mp3'. duration: -999999 })
 client.sendMessage(from. audio. MessageType.audio.{quoted: sam. mimetype: 'audio/mp3'. duration: -999999. ptt: true. sendEphemeral: true})
 break              
 }
