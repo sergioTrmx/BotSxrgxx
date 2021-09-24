@@ -99,9 +99,8 @@ case 'audio':
 const audio = fs.readFileSync('./media/otakuQliao.mp3')
 client.sendMessage(from, audio, MessageType.audio)
 break
-}
 
-});
+}
 
 } catch (e) {
         
