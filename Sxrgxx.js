@@ -90,11 +90,10 @@ const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
-case 'puto':
+case 'audio':
 const audio = fs.readFileSync('./media/otakuQliao.mp3')
-client.sendMessage(from. audio. MessageType.audio,{quoted: sam. mimetype= 'audio/mp3'. duration= -999999 })
-client.sendMessage(from. audio. MessageType.audio,{quoted: sam. mimetype= 'audio/mp3'. duration= -999999. ptt= true. sendEphemeral= true})
-break              
+client.sendMessage(from, audio, MessageType.audio)
+break
 }
 
 } catch (e) {
