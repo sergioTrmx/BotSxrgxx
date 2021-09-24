@@ -91,7 +91,7 @@ client.sendMessage(from, imagen, MessageType.image)
 break
 
 case 'angel':
-const imagen = fs.readFileSync('./media/ANGEL1.jpg')
+const image = fs.readFileSync('./media/ANGEL1.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
