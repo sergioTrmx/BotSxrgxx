@@ -105,6 +105,24 @@ const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
+case 'ban':
+if (!itsMe) return reply(mess.only.ownerB)
+mentioned = sam.message.extendedTextMessage.contextInfo.mentionedJid
+if (mentioned.length !== 0){
+for (let i = 0; i < mentioned.length; i++){
+addBanned(mentioned[0], args[1], ban)
+}
+mentions(`@${mentioned[0].split('@')[0]} Usted a sido baneado, lo que significa que no podra usar el bot!`, mentioned, true)
+} else if (isQuotedMsg) {
+if (quotedMsg.sender.match('529984907794')) return reply(`🤨`)
+addBanned(quotedMsg.sender, args[1], ban)
+mentions(`@${mentioned[0].split('@')[0]} Usted a sido baneado, lo que significa que no podra usar el bot!`, mentioned, true)
+} else if (!isNaN(args[1])) {
+addBanned(args[1] + '@s.whatsapp.net', args[2], ban)
+mentions(`@${mentioned[0].split('@')[0]} Usted a sido baneado, lo que significa que no podra usar el bot!`, mentioned, true)
+}
+break
+
 case 'autostick':            
 if (!isGroup) return reply(mess.only.group)
 if (!isAdmin) return reply(mess.only.admin)     
