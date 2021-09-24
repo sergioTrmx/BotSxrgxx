@@ -1,10 +1,10 @@
 {
-  "name": "Nombre",
+  "name": "SxrgxxBot",
   "version": "0.0.0",
-  "description": "",
-  "main": "nombre del archivo creado anteriormente.js",
+  "description": "No comment",
+  "main": "Sxrgxx.js",
   "scripts": {
-  "start": "node nombre del archivo creado anteriormente.js"
+  "start": "node Sxrgxx.js"
   },
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1"
