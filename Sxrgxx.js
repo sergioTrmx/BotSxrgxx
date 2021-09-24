@@ -76,7 +76,22 @@ const isMe = senderNumber == botNumber
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
-if(body == ('hola')){
+if(body == ('sexo')){
+client.sendMessage(from, 'sexo dónde? 🙈🙈', MessageType.text, {quoted: sam})
+
+if(body == ('bot')){
+client.sendMessage(from, 'manden sexo', MessageType.text, {quoted: sam})
+
+if(body == ('joto')){
+client.sendMessage(from, 'tu madre', MessageType.text, {quoted: sam})
+
+if(body == ('soy nuevo')){
+client.sendMessage(from, 'ven te quito lo nuevo 🥵🥵', MessageType.text, {quoted: sam})
+
+if(body == ('Ola')){
+client.sendMessage(from, 'ola como estás', MessageType.text, {quoted: sam})
+
+if(body == ('Hola')){
 client.sendMessage(from, 'como estás pana', MessageType.text, {quoted: sam})
 }
 switch (command) {
