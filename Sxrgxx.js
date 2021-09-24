@@ -105,6 +105,26 @@ const imagen = fs.readFileSync('./media/Sxrgxx.jpg')
 client.sendMessage(from, imagen, MessageType.image)
 break
 
+case 'autostick':            
+if (!isGroup) return reply(mess.only.group)
+if (!isAdmin) return reply(mess.only.admin)     
+if (args.length < 1) return reply('Escribe *1* para activar')                    
+if (args[0] === '1') {                             
+	if (isAutoSt) return reply('*Ya está activo*')          
+	autostick.push(from)             
+	fs.writeFileSync('./src/autostick.json', JSON.stringify(autostick))      
+	reply(`*[ Activado ]*`)  
+	reply(`*ahora, todas las fotos que se envien en el grupo se convertiran en sticker automaticamente*`)  
+} else if (args[0] === '0') {           
+	var ini = autostick.indexOf(from)
+	autostick.splice(ini, 1)                  
+	fs.writeFileSync('./src/autostick.json', JSON.stringify(autostick))      
+	reply(`Desactivado`)              
+} else {                                
+	reply('1 para activar, 0 para desactivar')        
+}                          
+break
+
 case 'angel':
 const image = fs.readFileSync('./media/ANGEL1.jpg')
 client.sendMessage(from, imagen, MessageType.image)
