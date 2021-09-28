@@ -2,7 +2,7 @@
   "name": "SxrgxxBot",
   "version": "0.0.2",
   "description": "Only termux",
-  "main": "Sxrgxx.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
