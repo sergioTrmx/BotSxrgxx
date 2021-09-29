@@ -94,6 +94,7 @@ const isGroup = from.endsWith('@g.us')
 const sender = sam.key.fromMe ? client.user.jid : isGroup ? sam.participant : sam.key.remoteJid
 const senderNumber = sender.split("@")[0]
 const isMe = senderNumber == botNumber
+const isAutoSt = isGroup ? autostick.includes(from) : false
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
