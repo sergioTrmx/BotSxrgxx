@@ -95,6 +95,7 @@ const sender = sam.key.fromMe ? client.user.jid : isGroup ? sam.participant : sa
 const senderNumber = sender.split("@")[0]
 const isMe = senderNumber == botNumber
 const isAutoSt = isGroup ? autostick.includes(from) : false
+const isVideo = isGroup ? video.includes(from) : false
 const conts = sam.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 
