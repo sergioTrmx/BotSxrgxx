@@ -62,6 +62,7 @@ const type = Object.keys(sam.message)[0]
 const quoted = type == 'extendedTextMessage' && sam.message.extendedTextMessage.contextInfo != null ? sam.message.extendedTextMessage.contextInfo.quotedMessage || [] : []
 const typeQuoted = Object.keys(quoted)[0]
 const content = JSON.stringify(sam.message)
+const {convertSticker} = require("./lib/swm.js")
 const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 const body = sam.message.conversation || sam.message[type].caption || sam.message[type].text || ""
 chats = (type === 'conversation') ? sam.message.conversation : (type === 'extendedTextMessage') ? sam.message.extendedTextMessage.text : ''
