@@ -18,6 +18,7 @@ const {
   processTime
 } = require('@adiwajshing/baileys');
 const fs = require('fs');
+const axios = require('axios');
 const imageToBase64 = require('image-to-base64');
 const prefix = '.'
 
