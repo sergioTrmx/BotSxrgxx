@@ -7,6 +7,8 @@
   "start": "node sxrgxx.js"
   },
   "dependencies": {
-    "@adiwajshing/baileys": "^3.4.1"
+    "@adiwajshing/baileys": "^3.4.1",
+    "emoji-api": "^1.0.2",
+    "image-to-base64": "^2.2.0"
   }
 }
