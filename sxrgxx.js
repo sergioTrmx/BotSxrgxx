@@ -1,4 +1,22 @@
-const { WAConnection } = require('@adiwajshing/baileys');
+const { 
+  WAConnection,
+  MessageType,
+  Presence, 
+  MessageOptions,
+  Mimetype,
+  WALocationMessage,
+  WA_MESSAGE_STUB_TYPES,
+  ReconnectMode,
+  ProxyAgent,
+  GroupSettingChange,
+  ChatModification,
+  waChatKey,
+  WA_DEFAULT_EPHEMERAL,
+  mentionedJid,
+  prepareMessageFromContent, 
+  Browsers,
+  processTime
+} = require('@adiwajshing/baileys');
 const fs = require('fs');
 
 async function iniciar () { 
